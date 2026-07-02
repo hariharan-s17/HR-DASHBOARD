@@ -97,3 +97,12 @@ body{
 }
 
 }
+
+@media(max-width:576px){
+.update-container{ padding:14px 10px; }
+.update-card{ padding:20px 14px; border-radius:16px; }
+.update-card h2{ font-size:1.1rem; }
+.form-group input,
+.form-group select{ padding:10px 12px; font-size:14px; }
+.save-btn{ font-size:0.95rem; padding:12px; }
+}

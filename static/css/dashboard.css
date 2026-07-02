@@ -777,100 +777,198 @@ body{
 padding:10px;
 }
 
-.asset-grid{
-grid-template-columns:repeat(2,1fr);
+.dashboard-container{
+width:100%;
+padding:10px 0 30px;
 }
 
+/* Navbar */
 .top-navbar{
 flex-direction:column;
-gap:12px;
+gap:10px;
 align-items:stretch;
-border-radius:18px;
-padding:14px 18px;
+border-radius:14px;
+padding:12px 14px;
+position:relative;
+top:0;
+margin:8px;
 }
 
 .logo-area h2{
 text-align:center;
 justify-content:center;
+font-size:1rem;
 }
 
 .user-actions{
 justify-content:center;
 flex-wrap:wrap;
+gap:8px;
 }
 
-.asset-top-bar{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.nav-buttons{
-justify-content:center;
-flex-wrap:wrap;
-gap:6px;
-}
-
-.nav-buttons button{
-padding:7px 14px;
+.welcome-user{
 font-size:0.82rem;
 }
 
+.logout-btn{
+font-size:0.82rem;
+padding:7px 14px;
+}
+
+/* Stats */
 .stats-container{
 grid-template-columns:repeat(2,1fr);
-gap:12px;
+gap:10px;
+margin:0 8px 20px;
 }
 
 .stat-card{
-padding:14px;
+padding:14px 10px;
 }
 
+.stat-card h2{
+font-size:1.4rem;
+}
+
+.stat-icon{
+width:46px;
+height:46px;
+font-size:18px;
+}
+
+/* Nav tabs */
+.nav-buttons{
+justify-content:flex-start;
+flex-wrap:wrap;
+gap:6px;
+padding:0 8px;
+}
+
+.nav-buttons button{
+padding:7px 12px;
+font-size:0.78rem;
+}
+
+/* Section card */
+.section{
+padding:16px 10px;
+border-radius:12px;
+margin:0 8px 20px;
+}
+
+/* Directory header */
 .directory-header{
 flex-direction:column;
 align-items:flex-start;
+gap:10px;
 }
 
+/* Tables — wrap in scrollable container */
 .employee-table,
 .request-table,
 .history-table,
 .inventory-table{
     display:block;
+    width:100%;
     overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
     white-space:nowrap;
+    border-radius:10px;
 }
 
+.employee-table td,
+.request-table td,
+.history-table td,
+.inventory-table td{
+    white-space:nowrap;
+    word-wrap:normal;
+    word-break:normal;
+    max-width:none;
+    padding:12px 14px;
+    font-size:0.82rem;
 }
 
-@media(max-width:576px){
+.employee-table th,
+.request-table th,
+.history-table th,
+.inventory-table th{
+    padding:11px 14px;
+    font-size:0.8rem;
+}
 
+/* Asset grid */
 .asset-grid{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
 
-.stats-container{
-grid-template-columns:1fr;
-}
-
-.request-buttons{
+.asset-top-bar{
 flex-direction:column;
+align-items:flex-start;
+gap:12px;
 }
 
 .asset-actions{
 flex-direction:column;
 width:100%;
-align-items:stretch;
+gap:10px;
 }
 
 .search-box{
 width:100%;
+border-radius:8px;
 }
 
-.add-asset-btn{
-width:100%;
-text-align:center;
-justify-content:center;
+/* Buttons */
+.add-asset-btn,
+.approve-btn,
+.reject-btn,
+.update-btn,
+.delete-btn,
+.view-btn,
+.edit-btn{
+font-size:0.78rem;
+padding:7px 12px;
+}
+
+.request-buttons{
+flex-wrap:wrap;
+gap:6px;
 }
 
 }
+
+@media(max-width:480px){
+
+.stats-container{
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.asset-grid{
+grid-template-columns:1fr;
+}
+
+.nav-buttons button{
+padding:6px 10px;
+font-size:0.72rem;
+}
+
+.section{
+padding:14px 8px;
+margin:0 6px 16px;
+}
+
+.stat-card h2{
+font-size:1.2rem;
+}
+
+.stat-card p{
+font-size:0.78rem;
+}
+
+}
+
 
 /* ===========================
    ANIMATION
